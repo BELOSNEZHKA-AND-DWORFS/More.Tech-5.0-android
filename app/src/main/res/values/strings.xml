@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hackaton</string>
+    <string name="title_settings">Настройки</string>
+    <string name="title_user_profile">Профиль</string>
+    <string name="title_followed">Избранное</string>
+    <string name="title_maps">Карта</string>
+</resources>

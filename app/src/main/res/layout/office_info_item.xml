@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:backgroundTint="@color/gray"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@id/cv_CardView">
+
+        <TextView
+            android:id="@+id/tvHeaderContent"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:paddingStart="50dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="50dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgArticle"
+            app:layout_constraintTop_toTopOf="@id/constraint_layout" />
+
+        <TextView
+            android:id="@+id/tvWorkingTime"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:ellipsize="end"
+            android:maxLines="15"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:paddingBottom="5dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgArticle"
+            app:layout_constraintTop_toBottomOf="@id/tvHeaderContent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnMakeCall"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_phone_ring"
+            app:layout_constraintEnd_toStartOf="@+id/btnMakePath"
+            app:layout_constraintTop_toTopOf="@id/tvHeaderContent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnMakePath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_path_get"
+            app:layout_constraintEnd_toEndOf="@id/tvHeaderContent"
+            app:layout_constraintTop_toTopOf="@id/tvHeaderContent" />
+
+        <ImageView
+            android:id="@+id/imgArticle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_vtb_snippet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:gravity="center_horizontal"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:text="Сделать вызов"
+            android:textSize="8sp"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/btnMakeCall" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:gravity="center_horizontal"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:text="Построить маршрут"
+            android:textSize="8sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMakePath" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
